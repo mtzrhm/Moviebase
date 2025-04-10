@@ -22,11 +22,15 @@ class OmdbService
             return collect();
         }
 
-        $response = Http::get($this->baseUri, [
-            'apikey' => $this->apiKey,
-            's' => $query,
-            'type' => $type,
-        ]);
+        try {
+            $response = Http::get($this->baseUri, [
+                'apikey' => $this->apiKey,
+                's' => $query,
+                'type' => $type,
+            ]);
+        } catch (\Exception $e) {
+            return collect();
+        }
 
         if (!$response->successful() || $response['Response'] === 'False') {
             return collect();
@@ -41,11 +45,15 @@ class OmdbService
             return [];
         }
 
-        $response = Http::get($this->baseUri, [
-            'apikey' => $this->apiKey,
-            'i' => $imdbId,
-            'type' => $type,
-        ]);
+        try {
+            $response = Http::get($this->baseUri, [
+                'apikey' => $this->apiKey,
+                'i' => $imdbId,
+                'type' => $type,
+            ]);
+        } catch (\Exception $e) {
+            return [];
+        }
 
         $data = $response->json();
 

@@ -10,7 +10,7 @@ Die Kernfunktionen sind:
 
 - **🔐 Registrierung & Login**: Benutzer können sich registrieren und im geschützten Bereich anmelden.
 - **🔎 Filmbasierte Suche**: Integration der **OMDb API**, um Filme per Titel suchen und anzeigen zu können.
-- **⭐ Filmbewertung**: Nutzer können Filme bewerten (1–10). Eine **Durchschnittsbewertung** wird aus allen User-Ratings berechnet (nicht zu verwechseln mit IMDb oder Metascore).
+- **⭐ Filmbewertung**: Nutzer können Filme bewerten (1–5). Eine **Durchschnittsbewertung** wird aus allen User-Ratings berechnet (nicht zu verwechseln mit IMDb oder Metascore).
 - **🗂️ Bewertete Filme**: Jeder User kann seine eigenen bewerteten Filme in einer Liste einsehen.
 - **💡 Fokus auf Technik**: Die technische Architektur steht über der optischen Gestaltung. Ziel ist eine **performante**, **ressourcenschonende**, **API-effiziente** Lösung.
 
@@ -50,8 +50,8 @@ Die Kernfunktionen sind:
 - Livewire Policies sichern Bewertungen ab
 
 ### 5. **Testing mit Pest & Docker**
-- Eigene `.env.testing` + `docker-entrypoint-initdb.d` Setup für Testdatenbank
-- Umfassende **Pest-Tests** für Services und Logik
+- Eigene `.env.testing`
+- **Pest-Tests** für Services und Logik
 
 ---
 
