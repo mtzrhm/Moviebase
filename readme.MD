@@ -63,6 +63,8 @@ Die Kernfunktionen sind:
 
 # 2. Installiere Abhängigkeiten
 ./vendor/bin/sail composer install
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev (für lokale Entwicklung)
 ./vendor/bin/sail artisan migrate
 
 # 3. Starte Tests (Pest)
